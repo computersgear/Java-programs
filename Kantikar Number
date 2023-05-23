@@ -1,0 +1,29 @@
+import java.util.*;
+class kantikar
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int s=0,d;
+        System.out.println("Enter a number");
+        int n = sc.nextInt();
+        int i=n;
+        while(n!=0)
+        {
+            d=n%10;
+            s=s+d;
+            n=n/10;
+        }
+        int x,c=0,m=i*i;
+        while(m!=0)
+        {
+            x=m%10;
+            c=c+x;
+            m=m/10;
+        }
+        if(s==c)
+        System.out.println("Yes! Kanitkar number");
+        else
+        System.out.println("Not! a Kanitkar number");
+    }
+}
