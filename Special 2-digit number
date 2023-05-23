@@ -1,0 +1,24 @@
+import java.util.*;
+class SpecialNumber_q2
+{
+    public static void main(String args[]) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter a 2 digit number: ");
+        int on = sc.nextInt();
+        int n = on;
+        int c = 0, ds = 0, dp = 1,d;
+        while (n != 0) 
+        {
+            d = n % 10;
+            n= n/10;
+            ds = ds+d;
+            dp = dp* d;
+            c++;
+        }
+        if (ds + dp == on)
+            System.out.println("Yes a Special 2-digit number");
+        else
+            System.out.println("Not a special 2-digit number"); 
+    }
+}
