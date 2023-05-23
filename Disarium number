@@ -1,0 +1,30 @@
+import java.util.*;
+class Disarium 
+{
+    public static void main(String args[])
+        {
+            Scanner sc = new Scanner(System.in);
+            int c=0 ,r,s=0,y;
+            System.out.println("Enter a number : ");
+            int n = sc.nextInt();
+            y=n;
+            while(n>0)
+            {
+                r=n%10;
+                c++;
+                n=n/10;
+            }
+            n=y;
+            while(n>0)
+            {
+            r=n%10;
+            s=s+(int)Math.pow(r,c);
+            c--;
+            n=n/10;
+            }
+            if(s == y)
+                System.out.println("Yes! Disarium Number");
+            else
+                System.out.println("Not a Disarium Number");
+        }
+}
