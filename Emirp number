@@ -1,0 +1,43 @@
+import java.util.*;
+class emirp
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int d,n,c=0;
+        System.out.println("Enter a number");
+        n = sc.nextInt();
+        for(int i=1;i<=n;i++)
+        {
+            if(n%i==0)  
+            {
+            c++;
+            }
+        }
+        if(c==2)
+        {
+          int  t=n;
+          int rev=0;
+          while(t!=0)
+          {
+              d=t%10;
+              rev=rev*10+d;
+              t=t/10;
+          }
+          int c2=0;
+          for(int i=1;i<=rev;i++)
+          {
+              if(rev%i==0)
+              {
+                  c2++;
+              }
+          }
+          if (c2 == 2)
+                System.out.println("Emirp Number");
+            else
+                System.out.println("Not Emirp Number");
+        }
+        else
+            System.out.println("Not Emirp Number");
+        }
+    }
