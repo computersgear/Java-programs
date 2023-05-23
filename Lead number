@@ -1,0 +1,24 @@
+import java.util.*;
+class lead_number_q4
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        int d,n,so=0,se=0;
+        System.out.println("Enter a number");
+        n = sc.nextInt();
+        while(n!=0)
+        {
+            d=n%10;
+            if(d%2==0)
+            se=se+d;
+            else
+            so=so+d;
+            n=n/10;
+        }
+        if(so==se)
+        System.out.println("Yes! Lead number");
+        else
+        System.out.println("Not! a Lead number");
+    }
+}
