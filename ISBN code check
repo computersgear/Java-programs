@@ -1,13 +1,8 @@
-import java.util.*;
 class ISBN
 {
-    public static void main(String args[]) 
+    public static void main(int n) 
     {
-        Scanner sc = new Scanner(System.in);
-        int n,n1,i,r,sum=0,c=0;
-        System.out.print("Enter the ISBN: ");
-        n=sc.nextInt();
-        n1=n;
+        int i,r,sum=0,c=0,n1=n;
         while (n1> 0) 
         {
             n1=n1/10;
@@ -24,9 +19,9 @@ class ISBN
                 n=n/10;
             }
             if(sum%11==0)
-            System.out.println("A valid ISBN code");
+            System.out.println("Legal ISBN ");
             else
-            System.out.println("Not a valid ISBN code");
+            System.out.println("Illegal ISBN ");
         }
     }
 }
