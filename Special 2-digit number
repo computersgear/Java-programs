@@ -16,9 +16,14 @@ class SpecialNumber_q2
             dp = dp* d;
             c++;
         }
+        if(c==2)
+        {
         if (ds + dp == on)
             System.out.println("Yes a Special 2-digit number");
         else
             System.out.println("Not a special 2-digit number"); 
+        }
+        else
+        System.out.println("Not a 2-digit number");
     }
 }
